@@ -225,8 +225,14 @@ class LineSegmentsGeometry extends InstancedBufferGeometry {
 	}
 
 	toJSON() {
+		
+		const data = super.toJSON();
 
-		// todo
+        data.isLineSegmentsGeometry = this.isLineSegmentsGeometry
+
+		data.type = this.type
+
+		return data;
 
 	}
 
